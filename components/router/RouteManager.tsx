@@ -10,13 +10,17 @@ import DestinationMap from '../ambulanceScreens/mapScreens/destination'
 import FinalMap from '../ambulanceScreens/mapScreens/final'
 import NearByAmbulance from '../vehicleScreens/nearbyAmbulance'
 
+// sanjay
+import screeOne from '../introScreens/screenOne'
+
 const RouteManager = () => {
     const Stack = createNativeStackNavigator()
 
     return (
         <NavigationContainer>
             <Stack.Navigator
-                initialRouteName='Home'
+                // initialRouteName='Home'
+                initialRouteName='screenOne'
             >
                 <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
                 <Stack.Screen name="AmbulanceHome" component={AmbulanceHome} options={{ headerShown: false }} />
@@ -25,6 +29,11 @@ const RouteManager = () => {
                 <Stack.Screen name="DestinationScreen" component={DestinationMap} options={{ headerShown: false }} />
                 <Stack.Screen name="FinalMapScreen" component={FinalMap} options={{ headerShown: false }} />
                 <Stack.Screen name="NearByAmbulance" component={NearByAmbulance} options={{ headerShown: false }} />
+
+
+                {/* sanjay */}
+                <Stack.Screen name="screenOne" component={screeOne} options={{ headerShown: false }} />
+
             </Stack.Navigator>
         </NavigationContainer>
     )

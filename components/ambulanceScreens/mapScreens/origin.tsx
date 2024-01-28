@@ -55,7 +55,7 @@ const OriginMap = ({ navigation }: { navigation: NavigationProp<any> }) => {
     }, [name]);
     return (
         <View style={styles.container}>
-            <SafeAreaView>
+            <SafeAreaView style={{position: 'relative'}}>
                 {/* Preloader start */}
                 <LottieView
                     source={require("../../../assets/loader.json")}
